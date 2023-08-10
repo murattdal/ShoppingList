@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title>Login & Signup Form | CodingNepal</title>
+    <link rel="stylesheet" href="style.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  </head>
+  <body>
+    <div class="wrapper">
+      <div class="title-text">
+        <div class="title login">Giriş Yap</div>
+        <div class="title signup">Kayıt Ol</div>
+      </div>
+      <div class="form-container">
+        <div class="slide-controls">
+          <input type="radio" name="slide" id="login" checked>
+          <input type="radio" name="slide" id="signup">
+          <label for="login" class="slide login">Giriş Yap</label>
+          <label for="signup" class="slide signup">Kayıt Ol</label>
+          <div class="slider-tab"></div>
+        </div>
+        <div class="form-inner">
+          <form action="#" class="login">
+            <div class="field">
+              <input type="email" placeholder="E-posta" required>
+            </div>
+            <div class="field">
+              <input type="password" placeholder="Şifre" required>
+            </div>
+            <br>
+
+            <div class="field btn">
+              <div class="btn-layer"></div>
+              <input type="submit" value="Giriş Yap">
+            </div>
+            <br>
+            <div class="signup-link">Üye değil misiniz? <a href="">Hemen kaydolun</a></div>
+          </form>
+          <form action="#" class="signup" onsubmit="return checkPasswords()">
+            <div class="field">
+                <input type="text" placeholder="Ad Soyad" required>
+            </div>
+            <div class="field">
+                <input type="email" placeholder="E-posta" required>
+            </div>
+            <div class="field">
+                <input type="password" placeholder="Şifre" id="password" required pattern="^(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{8,}$" title="Şifre en az 8 karakter olmalı ve büyük harf, küçük harf ve rakam içermelidir.">
+            </div>
+            <div class="field">
+                <input type="password" placeholder="Şifreyi Onayla" id="confirmPassword" required>
+            </div>
+    
+            <div class="field btn">
+                <div class="btn-layer"></div>
+                <input type="submit" value="Kayıt Ol">
+            </div>
+        </form>
+        </div>
+      </div>
+    </div>
+    <script src="script.js"></script>
+  </body>
+</html>

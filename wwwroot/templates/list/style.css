@@ -1,0 +1,157 @@
+﻿
+ul {
+    margin: 0;
+    padding: 0;
+}
+
+#title ul {
+    list-style-type: none;
+}
+
+.modal-header {
+    background: #3680a1;
+    color: #fff;
+}
+
+.required:after {
+    content: " *";
+    color: red;
+}
+
+td {
+    vertical-align: middle;
+}
+
+
+.form-control-borderless {
+    border: none;
+}
+
+    .form-control-borderless:hover, .form-control-borderless:active, .form-control-borderless:focus {
+        border: none;
+        outline: none;
+        box-shadow: none;
+    }
+
+.disabled-link {
+    color: gray;
+    pointer-events: none;
+}
+
+.position-relative {
+    position: relative;
+}
+
+
+.reset-filter {
+    position: absolute;
+    top: 50%;
+    right: 10px;
+    transform: translateY(-50%);
+    cursor: pointer;
+}
+
+.wrap-all-the-things {
+    min-height: 10%;
+    height: 100%;
+    padding-left: 10%;
+    margin-top: 0;
+    transition: transform 400ms, opacity 400ms;
+    background-color: #f9f9f9;
+    display: initial;
+    align-items: center;
+    justify-content: center;
+}
+
+
+    .wrap-all-the-things .color {
+        filter: blur(150px);
+    }
+
+        .wrap-all-the-things .color:nth-child(2) {
+            bottom: 100px;
+            left: 100px;
+            width: 100px;
+            height: 100px;
+            background: #b8deb6bb;
+            box-shadow: 0 4px 8px 0 rgba(80, 112, 101, 0.4);
+        }
+
+
+        .wrap-all-the-things .color:nth-child(3) {
+            bottom: 50px;
+            right: 1000px;
+            width: 500px;
+            height: 500px;
+            background: #F9F9F9;
+            box-shadow: 0 4px 8px 0 rgba(80, 112, 101, 0.4);
+        }
+
+.card-body {
+    box-shadow: 0 10px 8px 0 rgba(80, 112, 101, 0.2);
+    font-family: 'Poppins', sans-serif;
+    font-size: 25px;
+    width: 75%;
+    margin: 20px auto;
+    padding: 15px;
+    text-align: center;
+}
+
+
+.menu-of-day-card {
+    width: 100px;
+    height: 400px;
+}
+
+    .menu-of-day-card h2 {
+        font-size: 2em;
+        line-height: 2em;
+        color: #3b3f41;
+    }
+
+    .menu-of-day-card h3 {
+        font-size: 1em;
+        line-height: 1.2em;
+        padding: 0 20px;
+        opacity: 0;
+        color: #353333;
+    }
+
+    .menu-of-day-card:hover a {
+        background: rgba(0, 0, 0, 0.9);
+        height: 60%;
+        justify-content: center;
+    }
+
+
+@media (max-width: 768px) {
+    .wrap-all-the-things .color:nth-child(3) {
+        right: 50px;
+    }
+}
+
+@media (max-width: 576px) {
+    .wrap-all-the-things {
+        padding-left: 5%;
+    }
+
+        .wrap-all-the-things .color:nth-child(3) {
+            right: 20px;
+        }
+
+    .menu-of-day-card {
+        width: 60%;
+        height: auto;
+    }
+
+        .menu-of-day-card h2 {
+            font-size: 1.5em;
+            line-height: 1.5em;
+        }
+
+        .menu-of-day-card h3 {
+            font-size: 0.9em;
+            line-height: 1em;
+            padding: 0 10px;
+        }
+}

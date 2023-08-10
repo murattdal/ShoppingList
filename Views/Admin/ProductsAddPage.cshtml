@@ -1,0 +1,48 @@
+﻿
+@{
+    ViewData["Title"] = "ProductsAddPage";
+    Layout = "~/Views/Shared/AdminLayout.cshtml";
+}
+@if (TempData["ErrorMessage"] != null)
+{
+    <script>
+        alert('@Html.Raw(TempData["ErrorMessage"])');
+    </script>
+}
+
+<div class="text-center">
+    <h4>Ürün Ekleme</h4>
+</div>
+<hr />
+<div class="row justify-content-center">
+    <div class="col-md-4">
+        <form class="form-group" method="post">
+
+            <label class="form-label required">Ürün Kategorisi</label>
+            <select name="productCategory" class="form-control" required>
+                <option value="" disabled selected>Kategori Seçin</option>
+                @foreach (var productCategory in ViewBag.ProductCategory as List<string>)
+                {
+                    <option value="@productCategory">@productCategory</option>
+                }
+            </select>
+            <br />
+
+            <label class="form-label required">Ürün Adı</label>
+            <input type="text" name="productName" class="form-control" required />
+
+            <br />
+            <label class="form-label required">Ürün Görseli</label>
+            <input type="text" name="productImage" class="form-control" required />
+            <br />
+            <button class="btn btn-info">Kaydet</button>
+        </form>
+    </div>
+</div>
+    &nbsp
+<div class="text-center mt-3">
+    <a asp-area="" asp-controller="Admin" asp-action="AdminHomePage">Back to List</a>
+
+</div>
+
+
